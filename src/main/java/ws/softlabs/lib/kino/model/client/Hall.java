@@ -13,6 +13,7 @@ public class Hall implements Serializable, Comparable<Hall> {
 	public Hall(){		
 	}
 	public Hall(Long id) {
+		init(null, "", "");
 		this.id = id;
 	}
 	public Hall(Long id, Theater theater, String name, String hmtl) {
@@ -20,22 +21,20 @@ public class Hall implements Serializable, Comparable<Hall> {
 		this.id = id;
 	}
 	public Hall(Hall hall) {
-		this.id      = hall.getId();
-		this.name    = hall.getName();
-		this.html    = hall.getHtml();
-		this.theatre = hall.getTheatre();
+		init(hall.getTheatre(), hall.getName(), hall.getHtml());
+		this.id = hall.getId();
+	}	
+	public void init(String name) {
+		init(null, name, "");
 	}	
 	public void init(Theater theater, String name) {
-		this.theatre = (Theater)theater;
-		this.name    = name;
+		init(theater, name, "");
 	}
 	public void init(Theater theater, String name, String html) {
-		init(theater, name);
+		this.theatre = theater;
+		this.name    = name;
 		this.html    = html;
 	}
-	public void init(String name) {
-		this.name = name;
-	}	
 	public Long getId() {
 		return id;
 	}
