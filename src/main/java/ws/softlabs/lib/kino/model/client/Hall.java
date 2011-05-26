@@ -5,10 +5,10 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class Hall implements Serializable, Comparable<Hall> {
 
-	private Long		id;
+	private Long	id;
 	private Theater	theatre;
-	private String		name;
-	private String		html;
+	private String	name;
+	private String	html;
 
 	public Hall(){		
 	}
