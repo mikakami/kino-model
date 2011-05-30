@@ -10,6 +10,12 @@
   <version>0.0.4</version>
   <url>http://maven.apache.org</url>
 
+  <parent>
+    <groupId>ws.softlabs.app</groupId>
+    <artifactId>kino-application</artifactId>
+    <version>0.0.5</version>
+  </parent>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.6</maven.compiler.source>
